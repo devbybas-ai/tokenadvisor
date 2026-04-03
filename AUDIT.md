@@ -64,3 +64,4 @@
 | Date | Type | Findings | Actions |
 |---|---|---|---|
 | 2026-04-02 | Initial setup audit | Clean scaffold | Governance files created |
+| 2026-04-02 | Session 1 close | 2 transitive vulns (esbuild, cookie), all gates passing | Logged, monitoring upstream |
