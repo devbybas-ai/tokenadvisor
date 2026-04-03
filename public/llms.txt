@@ -1,0 +1,18 @@
+# TokenAdvisor
+
+> Real-time AI token usage and cost tracking system
+
+## What It Is
+TokenAdvisor is an internal tool built by BuiltByBas that tracks token usage and costs across multiple AI API providers (Anthropic, OpenAI, Google AI) in real time.
+
+## Key Features
+- Per-call token and cost tracking
+- Multi-provider support (Anthropic, OpenAI, Google AI)
+- Real-time dashboard with live cost counters
+- Self-validating cost calculations
+- Reconciliation against actual provider billing
+- Model-specific pricing with version control
+- Cross-project usage aggregation
+
+## Built By
+BuiltByBas - builtbybas.com

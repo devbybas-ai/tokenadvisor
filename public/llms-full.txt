@@ -1,0 +1,48 @@
+# TokenAdvisor - Full Reference
+
+> Real-time AI token usage and cost tracking system
+> Built by BuiltByBas (builtbybas.com)
+
+## Overview
+
+TokenAdvisor is a standalone full-stack application that sits between your applications and AI API providers. It captures every API call, calculates costs in real time using model-specific pricing, validates its own accuracy continuously, and reconciles against actual provider billing to ensure zero discrepancies.
+
+## Supported Providers
+
+- Anthropic (Claude models: Haiku, Sonnet, Opus)
+- OpenAI (GPT models, o-series, embedding models)
+- Google AI (Gemini models)
+- Extensible for future providers
+
+## System Architecture
+
+### Layer 1: API Integration
+Captures every outbound API request with full metadata including model, version, timestamp, and token counts (input, output, cache creation, cache read).
+
+### Layer 2: Cost Calculation Engine
+Applies accurate, model-specific pricing to every call in real time. Supports versioned pricing tables, dynamic updates, and batch API pricing differences.
+
+### Layer 3: Validation & Reconciliation
+Continuously verifies calculations against provider-reported usage. Per-call validation, 15-minute micro-reconciliation, daily reconciliation, and monthly invoice matching.
+
+### Layer 4: Dashboard
+Real-time display of token counts, costs, model breakdowns, project breakdowns, validation status, and historical trends.
+
+## Edge Cases Handled
+
+- Pricing changes (versioned, non-retroactive)
+- Cached tokens (different rates for cache read vs creation)
+- System-injected tokens
+- Model version changes
+- Streaming responses
+- Batch API pricing
+- Rate limiting and failed calls
+
+## Tech Stack
+
+Next.js 16, TypeScript, Tailwind CSS 4, shadcn/ui, PostgreSQL, Drizzle ORM, Auth.js v5, Zod v4, Recharts, Vitest
+
+## Contact
+
+BuiltByBas - devbybas@gmail.com
+https://builtbybas.com
